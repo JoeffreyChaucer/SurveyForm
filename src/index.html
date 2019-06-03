@@ -1,0 +1,162 @@
+<!Doctype>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Survey Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10 text-center">
+
+      <div class="header center-horizontally">
+        <h1 id="title">FCC survey form</h1>
+        <h4>Tell us what you think!</h4>
+      </div>
+      <p id="description">A simple form made as responsive web design task for <a href="https://www.freecodecamp.com" target="_blank">freeCodeCamp</a> course</p>
+    </div>
+  </div>
+  <div class="col-xs-1"></div>
+</div>
+<div class="spacer"></div>
+<form id="survey-form" method="GET" action="https://crossorigin.me/https://freecodecamp.com">
+  <!-- name row -->
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-5 text-right">
+      <label for="name" class="form-label" id="name-label"><span class="asterisk">*</span>Name: </label>
+    </div>
+    <div class="col-xs-5 text-left">
+      <input autofocus type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+  <!-- email row -->
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-5 text-right">
+      <label for="email" class="form-label" id="email-label"><span class="asterisk">*</span>email address: </label>
+    </div>
+    <div class="col-xs-5 text-left">
+      <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email address" required pattern='^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+  <!-- age row -->
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-5 text-right">
+      <label for="age" class="form-label" id="number-label"><span class="asterisk">*</span>Age: </label>
+    </div>
+    <div class="col-xs-5 text-left">
+      <input type="number" min="1" max="125" name="age" id="number" class="form-control" placeholder="Age" required>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+  <!-- occupation row -->
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-5 text-right">
+      <label for="occupation" class="form-label" id="occupation-label">Occupation: </label>
+    </div>
+    <div class="col-xs-5 text-left">
+      <select id="dropdown" name="occupation" class="form-control">
+      <option disabled value>Select an option</option>
+      <option value="student">Student</option>
+      <option value="job">Full Time Job</option>
+      <option value="learner">Full Time Learner</option>
+      <option value="preferNo">Prefer not to say</option>
+      <option value="other">Other</option>
+    </select>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+  <!-- recommend row -->
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-5 text-right">
+      <label for="recommend" class="form-label" id="recomment-label"><span class="asterisk">*</span>How likely is that you would recommend<br/> freeCodeCamp to a friend? </label>
+    </div>
+    <div class="col-xs-5 text-left">
+      <input type="radio" name="recommend" value="yes" required> Yes</input>
+      <br/>
+      <input type="radio" name="recommend" value="no" required> No</input>
+      <br/>
+      <input type="radio" name="recommend" value="maybe" required> Maybe</input>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+  <!-- improvements row -->
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-5 text-right">
+      <label for="improvements" class="form-label" id="improvements-label">Things that should be improved in the future<br>(Check all that apply):</label>
+    </div>
+    <div class="col-xs-5 text-left">
+      <input type="checkbox" name="improvements" value="0">Front-end Projects</input>
+      <br/>
+      <input type="checkbox" name="improvements" value="1"> Back-end Projects</input>
+      <br/>
+      <input type="checkbox" name="improvements" value="2"> Data Visualization</input>
+      <br/>
+      <input type="checkbox" name="improvements" value="3"> Challenges</input>
+      <br/>
+      <input type="checkbox" name="improvements" value="4"> Open Source Community</input>
+      <br/>
+      <input type="checkbox" name="improvements" value="5"> Gitter help rooms</input>
+      <br/>
+      <input type="checkbox" name="improvements" value="6"> Videos</input>
+      <br/>
+      <input type="checkbox" name="improvements" value="7"> City Meetups</input>
+      <br/>
+      <input type="checkbox" name="improvements" value="8"> Wiki</input>
+      <br/>
+      <input type="checkbox" name="improvements" value="9"> Forum</input>
+      <br/>
+      <input type="checkbox" name="improvements" value="10"> Additional Courses</input>
+
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-5 text-right">
+      <label for="comment" class="form-label" id="comment-label">Additional comments: </label>
+    </div>
+    <div class="col-xs-5 text-left">
+      <textarea name="comment" id="comment" class="form-control" placeholder="Add your comment (optional)" rows="10" cols="50"></textarea>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+  <!-- fields end -->
+  </div>
+  <div class="row spacer">
+  </div>
+  <div class="row text-center">
+    <div class="col-xs-12">
+      <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+
+</form>
+</div>
+    </body>
+</html>

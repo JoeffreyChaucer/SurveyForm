@@ -1,0 +1,38 @@
+.header {
+  border-radius:15px;
+  background-color:lightgray;
+  min-height:2em;
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+  margin-top:1em;
+}
+
+#description{
+  padding-top:1em;
+  padding-bottom:1em;
+  border-bottom: 1px solid lightblue;
+}
+
+.spacer {
+  padding-top:3em;
+}
+
+.form-label {
+  padding-top:7px;
+}
+
+.form-control {
+  max-width:300px;
+  width:auto;
+}
+
+.asterisk {
+  color: red;
+  font-weight: light;
+  font-size: 1em;
+  padding-right:5px;
+}
+
+.row {
+  padding-bottom:10px;
+}
